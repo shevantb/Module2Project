@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Buttons and alerts</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/js/bootstrap-alert.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+$('#success').click(function (e) {
+  e.preventDefault()
+  $('#message').html('<div class="alert alert-success fade in"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true">×</button>This is a success message</div>');
+})
+
+$('#info').click(function (e) {
+  e.preventDefault()
+  $('#message').html('<div class="alert alert-info fade in"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true">×</button>This is a info message</div>');
+})
+
+$('#warning').click(function (e) {
+  e.preventDefault()
+  $('#message').html('<div class="alert alert-warning fade in"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true">×</button>This is a warning message</div>');
+})
+
+$('#danger').click(function (e) {
+  e.preventDefault()
+  $('#message').html('<div class="alert alert-danger fade in"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true">×</button>This is a error message</div>');
+})
+});
+</script>
+</head>
+
+<body>
+<div class="container">
+<h2>Buttons and Alerts</h2>
+<p class="lead">This example shows off how to use buttons and jQuery together.
+Click the buttons to see the alert message. </p>
+       <p>
+       <form method="post">
+        <button type="button" class="btn btn-success" id="success">Success</button>
+        <button type="button" class="btn btn-info" id="info">Info</button>
+        <button type="button" class="btn btn-warning" id="warning">Warning</button>
+        <button type="button" class="btn btn-danger" id="danger">Danger</button>
+     </form>
+      <div id="message"></div>
+</div>
+</body>
+</html>
